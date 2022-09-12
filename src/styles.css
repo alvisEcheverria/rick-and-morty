@@ -1,0 +1,282 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #05292E;
+    color: #e4e6eb;
+    font-family: 'Monserrat', sans-serif;
+}
+
+*,
+*::before, 
+*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    padding: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: solid 0.1rem #2ca50c;
+    margin: 0 2rem;
+}
+
+.separator{
+    color: #2ca50c;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+
+/********************************** INPUT | COMPONENT: FILTER INPUT********************************************/
+
+.header-img{
+    background-image: url(../public/img/RickAndMortyHeader.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
+    height: 35rem;
+}
+
+.main-nav{
+    background-color: #9fc643;
+    width: 100%;
+    text-align: center;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .5);
+}
+
+.rick-and-morty-logo{
+    width: 18rem;
+    position: absolute;
+    left: 3rem;
+}
+
+.search-input{
+    background-color: #d2da4c;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    padding: 1.5rem 2.5rem;
+    border: none;
+    margin: 1rem;
+    width: 60%;
+    color: gray;
+}
+
+/********************************** CONTAINER | COMPONENT: LOCATION ********************************************/
+
+.info-container{
+    width: 80%;
+    margin: auto;
+    list-style: none;
+}
+
+/********************************** BAR SEARCH| COMPONENT: LOCATION SEARCH ********************************************/
+
+.info-search-container{
+    background-color: #062226;
+    position: absolute;
+    list-style: none;
+    top: 41rem;
+    right: 25.9rem;
+    width: 59%;
+    text-align: start;
+    line-height: 3rem;
+    max-height: 20rem;
+    overflow-y: auto;
+    color: #13acc9;
+    font-weight: 600;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .5);
+    text-shadow: 0px 0px 2.4px #d2da4c;
+    z-index: 100;
+}
+
+.search-location{
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+
+.search-location:hover{
+    background-color: #124146;
+    color: #d2da4c;
+    text-shadow: 0px 0px 3px #13acc9;
+}
+
+/********************************** LOCATION INFORMATION  | COMPONENT: LOCATION ********************************************/
+
+.description-location-container{
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .5);
+    background: #062226;
+    border-radius: 0.5rem;
+    margin: 2rem auto;
+}
+
+.slime-location{
+    width: 13%;
+    position: absolute;
+    right: 12rem;
+    top: 43rem;
+}
+
+.description-location{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 2rem;
+}
+
+.font-description{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: gray;
+}
+
+.font-description-location{
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #e4e6eb;
+}
+
+/********************************** RICK AND MORTY PORTAL IF RESIDENTS = 0 | COMPONENT: LOCATION ********************************************/
+
+.rick-portal-container{
+    display: flex;
+    justify-content: center;
+}
+
+.rick-portal{
+    width: 50%;
+}
+
+/********************************** RESIDENTS CONTAINER | COMPONENT: LOCATION ********************************************/
+
+.residents-container{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+/********************************** RESIDENTS CONTAINER | COMPONENT: RESIDENTS INFO ********************************************/
+
+.resident-item{
+    width: 50%;
+    padding: 1rem;
+}
+
+.resident-card{
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .5);
+    background-color: #062226;
+    border-radius: 0.5rem;
+    height: 20rem;
+    width: 50rem;
+    line-height: 3rem;
+    display: flex;
+}
+
+.img-resident{
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .5);
+    width: 20rem;
+}
+
+.resident-desciption-container{
+   padding: 0 1rem; 
+   font-size: 1.8rem; 
+   color: #e4e6eb;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.resident-name{
+    font-size: 2rem;
+    padding: 1rem;
+    border-bottom: solid 0.1rem #2ca50c;
+}
+
+.status{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-left: 1rem;
+    text-transform: uppercase;
+}
+
+.resident-descriptions{
+    padding: 0 1rem 1rem 1rem;
+    text-transform: capitalize;
+}
+
+.resident-description{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: gray;
+}
+
+/********************************** PAGINATION NUMBERS| COMPONENT: PAGINATION ********************************************/
+
+.page-number-container{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 3rem;
+    gap: 5%;
+}
+
+.page-number-container a{
+    text-decoration: none;
+    color: #e4e6eb;
+}
+
+.page-number{
+    background-color: #2ca50c;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .5);
+    font-size: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.page-number:hover{
+    background-color:#3a3b3c;
+}
+
+/********************************** FOOTER | COMPONENT: FOOTER ********************************************/
+
+footer{
+    height: 50rem;
+    background-color: #062226;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .5);
+}
+
+.footer-png{
+    background-image: url(../public/img/Slime.png);
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-png span{
+    color: #2ca50c;
+    font-size: 5rem;
+}
+
+.footer-png P{
+    color: #2ca50c;
+    padding: 2rem;
+}
+
+
+
+

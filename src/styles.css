@@ -38,6 +38,26 @@ h1{
     margin: 0 2rem;
 }
 
+/***************************************** LOADING SCREENS ******************************************/
+
+.loading-screen{
+    background-color: #050404;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-resident-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-resident{
+    width: 40%;
+}
+
 /***************************************** SEPARATOR DESCRIPTIONS **********************************/
 
 .separator{

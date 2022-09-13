@@ -4,11 +4,13 @@ import React, { useEffect, useState } from 'react';
 const ResidentInfo = ({url}) => {
 
     const [residentInfo, setResidentInfo] = useState({})
+        const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         
         axios.get(url)
             .then(res => setResidentInfo(res.data))
+                .finally(()=> setIsLoading(false))
 
     }, [])
 
@@ -29,24 +31,35 @@ const ResidentInfo = ({url}) => {
     return (
 
         <div className='resident-item'>
-            <div className='resident-card'>
-
-                <li><img className='img-resident' src={residentInfo.image} alt="character" /></li>
-                
-                <div className='resident-desciption-container'>
-                    <div  className='resident-name'>
-                        <li>{residentInfo?.name}</li>
+            {
+            isLoading? 
+                (   
+                    <div className='loading-resident-container'>
+                       <img className='loading-resident' src="./img/rick-and-morty-loading-resident.gif" alt="loading-rick" /> 
                     </div>
-
-                    <li className='status' style={{color: changeStatus()}}>{residentInfo.status}</li>
                     
-                    <div className='resident-descriptions'>
-                        <li><span className='resident-description'>Origin</span> <span className='separator'> | </span>{residentInfo.origin?.name}</li>
-                        <li><span className='resident-description'>Specie</span> <span className='separator'> | </span>{residentInfo.species}</li>
-                        <li><span className='resident-description'>Episodes where appear</span> <span className='separator'> | </span> {residentInfo.episode?.length}</li>  
+                ):(
+                <>
+                    <div className='resident-card'>
+
+                        <li><img className='img-resident' src={residentInfo.image} alt="character" /></li>
+                        
+                        <div className='resident-desciption-container'>
+                            <div  className='resident-name'>
+                                <li>{residentInfo?.name}</li>
+                            </div>
+
+                            <li className='status' style={{color: changeStatus()}}>{residentInfo.status}</li>
+                            
+                            <div className='resident-descriptions'>
+                                <li><span className='resident-description'>Origin</span> <span className='separator'> | </span>{residentInfo.origin?.name}</li>
+                                <li><span className='resident-description'>Specie</span> <span className='separator'> | </span>{residentInfo.species}</li>
+                                <li><span className='resident-description'>Episodes where appear</span> <span className='separator'> | </span> {residentInfo.episode?.length}</li>  
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div> 
+                </>
+            )} 
         </div>
     );
 };

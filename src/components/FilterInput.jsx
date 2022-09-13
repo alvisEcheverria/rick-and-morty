@@ -5,7 +5,7 @@ const FilterInput = ({nameLocation, setNameLocation}) => {
         <header>
                 <div className='header-img'></div>
                     <nav className='main-nav'>
-                        <img className='rick-and-morty-logo' src="../img/RickAndMortyLogo.png" alt="" />
+                        <a href="../index.html"><img className='rick-and-morty-logo' src="../img/RickAndMortyLogo.png" alt="" /></a>
                         <form>
                             <input className='search-input'
                             type="text"

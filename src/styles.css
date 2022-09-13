@@ -1,3 +1,15 @@
+:root{
+    --color-primary: #05292E;
+    --color-secondary: #062226;
+    --details-green: #2ca50c;
+    --white: #e4e6eb;
+    --nav-green: #9fc643;
+    --search-yellow: #d2da4c;
+    --search-bgn-hover: #124146;
+    --blue: #13acc9;
+    --gray: gray;
+}
+
 html{
     font-size: 62.5%;
 }
@@ -5,8 +17,8 @@ html{
 body{
     font-size: 16px;
     box-sizing: border-box;
-    background-color: #05292E;
-    color: #e4e6eb;
+    background-color: var(--color-primary);
+    color: var(--white);
     font-family: 'Monserrat', sans-serif;
 }
 
@@ -22,12 +34,14 @@ h1{
     padding: 2rem;
     text-align: center;
     text-transform: uppercase;
-    border-bottom: solid 0.1rem #2ca50c;
+    border-bottom: solid 0.1rem var(--details-green);
     margin: 0 2rem;
 }
 
+/***************************************** SEPARATOR DESCRIPTIONS **********************************/
+
 .separator{
-    color: #2ca50c;
+    color: var(--details-green);
     font-weight: 900;
     font-size: 2rem;
 }
@@ -44,7 +58,7 @@ h1{
 }
 
 .main-nav{
-    background-color: #9fc643;
+    background-color: var(--nav-green);
     width: 100%;
     text-align: center;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, .5);
@@ -57,19 +71,19 @@ h1{
 }
 
 .search-input{
-    background-color: #d2da4c;
+    background-color: var(--search-yellow);
     border-radius: 0.5rem;
     font-size: 1.6rem;
     padding: 1.5rem 2.5rem;
     border: none;
     margin: 1rem;
     width: 60%;
-    color: gray;
+    color: var(--gray);
 }
 
 /********************************** CONTAINER | COMPONENT: LOCATION ********************************************/
 
-.info-container{
+#info-container{
     width: 80%;
     margin: auto;
     list-style: none;
@@ -78,7 +92,7 @@ h1{
 /********************************** BAR SEARCH| COMPONENT: LOCATION SEARCH ********************************************/
 
 .info-search-container{
-    background-color: #062226;
+    background-color: var(--color-secondary);
     position: absolute;
     list-style: none;
     top: 41rem;
@@ -88,10 +102,10 @@ h1{
     line-height: 3rem;
     max-height: 20rem;
     overflow-y: auto;
-    color: #13acc9;
+    color: var(--blue);
     font-weight: 600;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, .5);
-    text-shadow: 0px 0px 2.4px #d2da4c;
+    text-shadow: 0px 0px 2.4px var(--search-yellow);
     z-index: 100;
 }
 
@@ -101,8 +115,8 @@ h1{
 }
 
 .search-location:hover{
-    background-color: #124146;
-    color: #d2da4c;
+    background-color: var(--search-bgn-hover);
+    color: var(--search-yellow);
     text-shadow: 0px 0px 3px #13acc9;
 }
 
@@ -110,7 +124,7 @@ h1{
 
 .description-location-container{
     box-shadow: 2px 2px 8px rgba(0, 0, 0, .5);
-    background: #062226;
+    background: var(--color-secondary);
     border-radius: 0.5rem;
     margin: 2rem auto;
 }
@@ -132,13 +146,13 @@ h1{
 .font-description{
     font-size: 1.2rem;
     text-transform: uppercase;
-    color: gray;
+    color: var(--gray);
 }
 
 .font-description-location{
     font-size: 2rem;
     text-transform: capitalize;
-    color: #e4e6eb;
+    color: var(--white);
 }
 
 /********************************** RICK AND MORTY PORTAL IF RESIDENTS = 0 | COMPONENT: LOCATION ********************************************/
@@ -169,7 +183,7 @@ h1{
 
 .resident-card{
     box-shadow: 2px 2px 8px rgba(0, 0, 0, .5);
-    background-color: #062226;
+    background-color: var(--color-secondary);
     border-radius: 0.5rem;
     height: 20rem;
     width: 50rem;
@@ -185,7 +199,7 @@ h1{
 .resident-desciption-container{
    padding: 0 1rem; 
    font-size: 1.8rem; 
-   color: #e4e6eb;
+   color: var(--white);
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -194,7 +208,7 @@ h1{
 .resident-name{
     font-size: 2rem;
     padding: 1rem;
-    border-bottom: solid 0.1rem #2ca50c;
+    border-bottom: solid 0.1rem var(--details-green);
 }
 
 .status{
@@ -212,7 +226,7 @@ h1{
 .resident-description{
     font-size: 1.2rem;
     text-transform: uppercase;
-    color: gray;
+    color: var(--gray);
 }
 
 /********************************** PAGINATION NUMBERS| COMPONENT: PAGINATION ********************************************/
@@ -227,11 +241,11 @@ h1{
 
 .page-number-container a{
     text-decoration: none;
-    color: #e4e6eb;
+    color: var(--white);
 }
 
 .page-number{
-    background-color: #2ca50c;
+    background-color: var(--details-green);
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
@@ -245,14 +259,14 @@ h1{
 }
 
 .page-number:hover{
-    background-color:#3a3b3c;
+    background-color:var(--nav-green);
 }
 
 /********************************** FOOTER | COMPONENT: FOOTER ********************************************/
 
 footer{
     height: 50rem;
-    background-color: #062226;
+    background-color: var(--color-secondary);
     box-shadow: 2px 2px 8px rgba(0, 0, 0, .5);
 }
 
@@ -268,12 +282,12 @@ footer{
 }
 
 .footer-png span{
-    color: #2ca50c;
+    color: var(--details-green);
     font-size: 5rem;
 }
 
 .footer-png P{
-    color: #2ca50c;
+    color: var(--details-green);
     padding: 2rem;
 }
 

@@ -51,7 +51,7 @@ const Locations = () => {
 
             <FilterInput nameLocation={nameLocation} setNameLocation={setNameLocation}/>
         
-            <div className='info-container'>
+            <div id='info-container'>
 
                 {nameLocation === '' ? null : <LocationsSearch location={locationPerName} setLocation={setLocation} setNameLocation={setNameLocation}/>}
                 

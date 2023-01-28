@@ -112,7 +112,7 @@ h1{
 
 /********************************** CONTAINER | COMPONENT: LOCATION ********************************************/
 
-.info-container{
+#info-container{
     width: 80vw;
     margin: 0 auto;
     list-style: none;
@@ -253,7 +253,7 @@ h1{
 
 .resident-name{
     font-size: 1.8rem;
-    padding: 0.5rem 0;
+    padding-bottom: 0.5rem;
     border-bottom: solid 0.1rem var(--details-green);
 }
 
@@ -303,6 +303,15 @@ h1{
 
 .page-number:hover{
     background-color:var(--nav-green);
+}
+
+.selected{
+    background-color:var(--search-yellow);
+    color: var(--color-primary);
+}
+
+.selected:hover{
+    background-color:var(--search-yellow);
 }
 
 /********************************** FOOTER | COMPONENT: FOOTER ********************************************/

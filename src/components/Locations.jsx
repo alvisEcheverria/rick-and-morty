@@ -62,7 +62,7 @@ const Locations = () => {
                 ):(
                 <div>
                     <FilterInput dimensionLocations={dimensionLocations} nameLocation={nameLocation} setNameLocation={setNameLocation} locationPerName={locationPerName}/>
-                    <div className='info-container'>
+                    <div id='info-container'>
                         <div className='description-location-container'>
                             <img class='slime-location' src="../img/slime-rick.png" alt="" />
                             <h1>{location?.name}</h1>

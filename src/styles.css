@@ -58,69 +58,78 @@ h1{
     width: 40%;
 }
 
-/***************************************** SEPARATOR DESCRIPTIONS **********************************/
-
-.separator{
-    color: var(--details-green);
-    font-weight: 900;
-    font-size: 2rem;
-}
-
-
 /********************************** INPUT | COMPONENT: FILTER INPUT********************************************/
 
-.header-img{
-    background-image: url(../public/img/RickAndMortyHeader.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right center;
-    height: 35rem;
+.img-header-content{
+    height: 60vh;
+    width: 100%;
+}
+
+.img-header-content img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
 }
 
 .main-nav{
     background-color: var(--nav-green);
     width: 100%;
+    height: 5vw;
     text-align: center;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, .5);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .rick-and-morty-logo{
-    width: 18rem;
+    width: 15vw;
     position: absolute;
-    left: 3rem;
+    left: 3vw;
+    top: 0;
+}
+
+.search-container{
+    width: 60%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 .search-input{
     background-color: var(--search-yellow);
     border-radius: 0.5rem;
-    font-size: 1.6rem;
-    padding: 1.5rem 2.5rem;
+    font-size: 1.2vw;
+    padding: 0 2rem 0 2rem;
     border: none;
-    margin: 1rem;
-    width: 60%;
+    width: 100%;
+    height: 100%;
     color: var(--gray);
 }
 
 /********************************** CONTAINER | COMPONENT: LOCATION ********************************************/
 
-#info-container{
-    width: 80%;
-    margin: auto;
+.info-container{
+    width: 80vw;
+    margin: 0 auto;
     list-style: none;
 }
 
-/********************************** BAR SEARCH| COMPONENT: LOCATION SEARCH ********************************************/
+/********************************** BAR SEARCH | COMPONENT: LOCATION SEARCH ********************************************/
 
 .info-search-container{
     background-color: var(--color-secondary);
     position: absolute;
     list-style: none;
-    top: 41rem;
-    right: 25.9rem;
-    width: 59%;
+    top: 3.5vw;
+    left: 0.5vw;
+    width: 98%;
     text-align: start;
-    line-height: 3rem;
-    max-height: 20rem;
+    line-height: 2vw;
+    max-height: 19rem;
     overflow-y: auto;
     color: var(--blue);
     font-weight: 600;
@@ -147,13 +156,15 @@ h1{
     background: var(--color-secondary);
     border-radius: 0.5rem;
     margin: 2rem auto;
+    width: 100%;
+    position: relative;
 }
 
 .slime-location{
-    width: 13%;
+    width: 13vw;
     position: absolute;
-    right: 12rem;
-    top: 43rem;
+    right: -0.5vw;
+    top: -1vw;
 }
 
 .description-location{
@@ -167,6 +178,9 @@ h1{
     font-size: 1.2rem;
     text-transform: uppercase;
     color: var(--gray);
+    border-right: 0.2rem solid var(--details-green);
+    padding-right: 0.5rem;
+    margin-right: 1rem;
 }
 
 .font-description-location{
@@ -206,47 +220,56 @@ h1{
     background-color: var(--color-secondary);
     border-radius: 0.5rem;
     height: 20rem;
-    width: 50rem;
+    width: 100%;
     line-height: 3rem;
     display: flex;
 }
 
-.img-resident{
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, .5);
-    width: 20rem;
+.item-a{
+    display: flex;
+    flex-direction: column; 
+    width: 40%; 
+    height: 100%;
 }
 
-.resident-desciption-container{
-   padding: 0 1rem; 
-   font-size: 1.8rem; 
-   color: var(--white);
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
+
+.img-resident{
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.item-b{
+    width: 60%;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    text-transform: capitalize;
 }
 
 .resident-name{
-    font-size: 2rem;
-    padding: 1rem;
+    font-size: 1.8rem;
+    padding: 0.5rem 0;
     border-bottom: solid 0.1rem var(--details-green);
 }
 
 .status{
     font-size: 1.2rem;
     font-weight: 600;
-    padding-left: 1rem;
     text-transform: uppercase;
-}
-
-.resident-descriptions{
-    padding: 0 1rem 1rem 1rem;
-    text-transform: capitalize;
 }
 
 .resident-description{
     font-size: 1.2rem;
     text-transform: uppercase;
     color: var(--gray);
+    padding-right: 0.5rem;
+    margin-right: 1rem;
+    border-right: solid 0.2rem var(--details-green);
 }
 
 /********************************** PAGINATION NUMBERS| COMPONENT: PAGINATION ********************************************/
@@ -266,8 +289,8 @@ h1{
 
 .page-number{
     background-color: var(--details-green);
-    width: 5rem;
-    height: 5rem;
+    width: 3.7vw;
+    height: 3.7vw;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -311,6 +334,146 @@ footer{
     padding: 2rem;
 }
 
+@media (max-width: 480px) {
+
+    h1{
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    h2{
+        font-size: 1.6rem;
+    }
+
+    .img-header-content{
+        height: 40vh;
+    }
+
+    .main-nav{
+        height: 14vw;
+    }
+    
+    .rick-and-morty-logo{
+        width: 18vw;
+        position: absolute;
+        left: 0.5vh;
+        top: 2vh;
+    }
+
+    .search-input{
+        font-size: 5vw;
+    }
+
+    .resident-item{
+        width: 100%;
+    }
+
+    .info-container{
+        width: 95%;
+    }
+
+    .resident-card{
+        width: 100%;
+        border: 0.1rem solid var(--details-green);
+    }
+
+    .item-b{
+        padding: 1rem 1rem;
+    }
+
+    .img-resident{
+        width: 100%;
+        height: 60%;
+        object-fit: cover;
+        border: 0.1rem solid var(--details-green);
+    }
+
+    .resident-name{
+        display: none;
+    }
+
+    .resident-name-content{
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        width: 100%; 
+        height: 40%;
+        text-align: center;
+        border: 0.1rem solid var(--details-green);
+    }
+
+    .resident-name-mobile{
+        font-size: 1.6rem;
+        border-bottom: none;
+        padding: 0;
+    }
+
+    .status{
+        font-size: 2rem;
+    }
+
+    .resident-description{
+        font-size: 1rem;
+    }
+
+    .slime-location{
+        width: 20vw;
+    }
+
+    .info-search-container{
+        top: 10vw;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    .font-description{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .font-description{
+        border-right: none;
+        border-bottom: 0.1rem solid var(--details-green);
+        padding-right: 0;
+        margin-right: 0;
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .font-description-location{
+        font-size: 1.6rem;
+    }
 
 
+    .description-location{
+        justify-content: space-between;
+    }
+
+    .page-number{
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .footer-png{
+        background-size: 100%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 912px) {
+    .resident-item{
+        width: 100%;
+    }
+
+    .resident-name-mobile{
+        display: none;
+    }
+}
+
+@media (min-width: 1024px){
+
+    .resident-name-content{
+        display: none;
+    }
+}
 

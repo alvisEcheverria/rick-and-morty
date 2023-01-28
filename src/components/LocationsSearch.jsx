@@ -1,23 +1,16 @@
 import React from 'react';
 
-const LocationsSearch = ({location, setLocation, setNameLocation}) => {
+const LocationsSearch = ({location, setNameLocation, dimension}) => {
+
 
     return (
-        
-        <div>
-           <ul className='info-search-container'>
-                {
-
-                    location.results?.map(local =>(
-
-                        <li className='search-location'  onClick={() => {setLocation(local), setNameLocation('')}} key={local.name}>{local.name}</li>
-
-                    ))
-
-                }
-            </ul>
-           
-        </div>
+        <ul className='info-search-container'>
+            {
+                location.results?.map(local =>(
+                    <li className='search-location'  onClick={() => {dimension(local), setNameLocation('')}} key={local.name}>{local.name}</li>
+                ))
+            }
+        </ul>
     );
 };
 

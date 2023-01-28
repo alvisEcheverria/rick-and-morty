@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import FilterInput from './FilterInput';
-import LocationsSearch from './LocationsSearch';
 import ResidentInfoList from './ResidentInfoList';
 import Pagination from './Pagination';
 import Footer from './Footer'
@@ -48,8 +47,11 @@ const Locations = () => {
 
     //**********************************************************
 
-    return (
+    const dimensionLocations = (local) =>{
+        setLocation(local)
+    }
 
+    return (
         <div onClick={() => setNameLocation('')}>
 
             {isLoading ?
@@ -58,21 +60,17 @@ const Locations = () => {
                         <img src="./img/rick-and-morty-loading.gif" alt="" />
                     </div>
                 ):(
-                <>
-                    <FilterInput nameLocation={nameLocation} setNameLocation={setNameLocation}/>
-                
-                    <div id='info-container'>
-
-                        {nameLocation === '' ? null : <LocationsSearch location={locationPerName} setLocation={setLocation} setNameLocation={setNameLocation}/>}
-                        
+                <div>
+                    <FilterInput dimensionLocations={dimensionLocations} nameLocation={nameLocation} setNameLocation={setNameLocation} locationPerName={locationPerName}/>
+                    <div className='info-container'>
                         <div className='description-location-container'>
                             <img class='slime-location' src="../img/slime-rick.png" alt="" />
                             <h1>{location?.name}</h1>
                             <ul>
                                 <div className='description-location'>
-                                    <li className='font-description'>Type <span className='separator'> | </span> <span className='font-description-location'>{location?.type}</span> </li>
-                                    <li className='font-description'>Dimension <span className='separator'> | </span> <span className='font-description-location'>{location.dimension}</span></li>
-                                    <li className='font-description'>Population <span className='separator'> | </span> <span className='font-description-location'>{location.residents?.length}</span></li>
+                                    <li className='font-description-location'><span className='font-description'>Type </span>{location?.type}</li>
+                                    <li className='font-description-location'><span className='font-description'>Dimension </span>{location.dimension} </li>
+                                    <li className='font-description-location'><span className='font-description'>Population </span>{location.residents?.length}</li>
                                 </div>
                             </ul>
                         </div>
@@ -88,8 +86,7 @@ const Locations = () => {
                     </div>
 
                 <Footer/>
-                </>  
-
+                </div> 
             )}
         </div>
     );

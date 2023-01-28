@@ -29,7 +29,6 @@ const ResidentInfo = ({url}) => {
     }
 
     return (
-
         <div className='resident-item'>
             {
             isLoading? 
@@ -41,21 +40,22 @@ const ResidentInfo = ({url}) => {
                 ):(
                 <>
                     <div className='resident-card'>
-
-                        <li><img className='img-resident' src={residentInfo.image} alt="character" /></li>
-                        
-                        <div className='resident-desciption-container'>
-                            <div  className='resident-name'>
-                                <li>{residentInfo?.name}</li>
+                        <div className='item-a'>
+                            <img className='img-resident' src={residentInfo.image} alt="character" />
+                            <div className='resident-name-content'>
+                                <h2 className='resident-name-mobile'>
+                                    {residentInfo?.name}
+                                </h2>
                             </div>
-
-                            <li className='status' style={{color: changeStatus()}}>{residentInfo.status}</li>
-                            
-                            <div className='resident-descriptions'>
-                                <li><span className='resident-description'>Origin</span> <span className='separator'> | </span>{residentInfo.origin?.name}</li>
-                                <li><span className='resident-description'>Specie</span> <span className='separator'> | </span>{residentInfo.species}</li>
-                                <li><span className='resident-description'>Episodes where appear</span> <span className='separator'> | </span> {residentInfo.episode?.length}</li>  
-                            </div>
+                        </div>
+                        <div className='item-b'>
+                            <h2 className='resident-name'>
+                                {residentInfo?.name}
+                            </h2>
+                            <p className='status' style={{color: changeStatus()}}>{residentInfo.status}</p>
+                            <p><span className='resident-description'>Origin</span>{residentInfo.origin?.name}</p>
+                            <p><span className='resident-description'>Specie </span>{residentInfo.species}</p>
+                            <p><span className='resident-description'>Episodes where appear </span>{residentInfo.episode?.length}</p>  
                         </div>
                     </div>
                 </>

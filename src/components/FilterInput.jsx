@@ -10,7 +10,7 @@ const FilterInput = ({nameLocation, setNameLocation, locationPerName, setLocatio
     return (
         <header>
             <div className='img-header-content'>
-                <img src="../public/img/RickAndMortyHeader.jpg" alt="rick-and-morty" />
+                <img src="../img/RickAndMortyHeader.jpg" alt="rick-and-morty" />
             </div>
             <nav className='main-nav'>
                 <a href="../index.html"><img className='rick-and-morty-logo' src="../img/RickAndMortyLogo.png" alt="" /></a>
